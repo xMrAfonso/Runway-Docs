@@ -2,7 +2,11 @@
 
 Runway brings MiniMessage formatting to text that other Minecraft plugins send as plain text.
 
-[Install Runway](getting-started/installation.md) | [Run a test](getting-started/first-formatting-test.md) | [See examples](examples/README.md)
+Quick links:
+
+- [Install Runway](getting-started/installation.md)
+- [Run a test](getting-started/first-formatting-test.md)
+- [See examples](examples/README.md)
 
 Use it when another plugin gives you a plain text box, but you want gradients, hover text, PlaceholderAPI values, MiniPlaceholders values, or reusable server-wide tags.
 
@@ -12,14 +16,12 @@ The usual workflow is simple: write MiniMessage in another plugin's config, add 
 
 ## What Runway Can Format
 
-| Area | Examples |
-| --- | --- |
-| Messages | Chat, system messages, plugin messages |
-| HUD | Action bars, boss bars, titles |
-| Menus | Tab list text, inventory titles |
-| Items | Display names, lore, item packets |
-| Dialogs | Text, buttons, inputs, dialog items |
-| Names | Text displays, nameplates, tab names |
+- **Messages:** chat, system messages, plugin messages
+- **HUD:** action bars, boss bars, titles
+- **Menus:** tab list text, inventory titles
+- **Items:** display names, lore, item packets
+- **Dialogs:** text, buttons, inputs, dialog items
+- **Names:** text displays, nameplates, tab names
 
 ## Fast Example
 
@@ -39,20 +41,16 @@ Use `/runway parse <text>` when you want to test formatting before editing a lar
 
 After the first startup, Runway uses:
 
-| File | Used for |
-| --- | --- |
-| `plugins/Runway/settings.yml` | Prefixes, listeners, item italics, MiniPlaceholders refreshes |
-| `plugins/Runway/lang.yml` | Runway command messages |
-| `plugins/Runway/placeholders/*.yml` | Custom placeholder groups |
+- `plugins/Runway/settings.yml` for prefixes, listeners, item italics, and MiniPlaceholders refreshes.
+- `plugins/Runway/lang.yml` for Runway command messages.
+- `plugins/Runway/placeholders/*.yml` for custom placeholder groups.
 
 Older `config.yml` and `placeholders.yml` files are migrated automatically when possible.
 
 ## Start Here
 
-| Goal | Page |
-| --- | --- |
-| Install the plugin | [Installation](getting-started/installation.md) |
-| Check formatting | [First Formatting Test](getting-started/first-formatting-test.md) |
-| Understand prefixes | [How Runway Parses Text](getting-started/how-runway-parses-text.md) |
-| Choose text locations | [Listeners](configuration/listeners.md) |
-| Copy a setup | [Configuration Setups](examples/configuration-setups.md) |
+- [Installation](getting-started/installation.md) for requirements and setup.
+- [First Formatting Test](getting-started/first-formatting-test.md) to check formatting.
+- [How Runway Parses Text](getting-started/how-runway-parses-text.md) to understand prefixes.
+- [Listeners](configuration/listeners.md) to choose text locations.
+- [Configuration Setups](examples/configuration-setups.md) for copyable recipes.

@@ -1,9 +1,7 @@
 # Commands and Permissions
 
-| Command | Permission | Purpose |
-| --- | --- | --- |
-| `/runway reload` | `runway.reload` | Reloads configuration, messages, placeholders, and resolvers. |
-| `/runway parse <text>` | `runway.parse` | Parses text and sends a preview to the command sender. |
+- `/runway reload` requires `runway.reload` and reloads configuration, messages, placeholders, and resolvers.
+- `/runway parse <text>` requires `runway.parse` and sends a parsed preview to the command sender.
 
 ## `/runway parse <text>`
 

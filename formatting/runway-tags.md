@@ -2,22 +2,18 @@
 
 Runway adds a small set of tags for text transforms and action bars.
 
-| Tag | Aliases | Purpose |
-| --- | --- | --- |
-| `<uppercase>` | `<upper>` | Converts content to uppercase. |
-| `<lowercase>` | `<lower>` | Converts content to lowercase. |
-| `<smallcaps>` | `<sc>` | Converts supported letters to small-cap characters. |
-| `<plain>` | None | Keeps visible text and removes nested styling. |
-| `<actionbar>` | `<ac>` | Sends content to the player's action bar. |
+- `<uppercase>` or `<upper>` converts content to uppercase.
+- `<lowercase>` or `<lower>` converts content to lowercase.
+- `<smallcaps>` or `<sc>` converts supported letters to small-cap characters.
+- `<plain>` keeps visible text and removes nested styling.
+- `<actionbar>` or `<ac>` sends content to the player's action bar.
 
 ## Text Transform Tags
 
-| Goal | Example | Output |
-| --- | --- | --- |
-| Uppercase | `$<uppercase>hello</uppercase>` | `HELLO` |
-| Lowercase | `$<lowercase>HELLO</lowercase>` | `hello` |
-| Small caps | `$<smallcaps>RunwayMC</smallcaps>` | Small-cap characters where supported |
-| Plain text | `$<plain><red>Hello</red> <bold>World</bold></plain>` | `Hello World` |
+- Uppercase: `$<uppercase>hello</uppercase>` outputs `HELLO`.
+- Lowercase: `$<lowercase>HELLO</lowercase>` outputs `hello`.
+- Small caps: `$<smallcaps>RunwayMC</smallcaps>` outputs small-cap characters where supported.
+- Plain text: `$<plain><red>Hello</red> <bold>World</bold></plain>` outputs `Hello World`.
 
 The shorter aliases work too: `<upper>`, `<lower>`, and `<sc>`.
 

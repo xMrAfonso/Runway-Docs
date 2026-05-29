@@ -2,14 +2,12 @@
 
 Typed placeholders go under `placeholders`. Use them when plain text replacements are not enough.
 
-| Type | Best for |
-| --- | --- |
-| `TEXT` | Static or formatted reusable text |
-| `NUMBER` | Numeric values |
-| `RANDOM` | Rotating tips, messages, or labels |
-| `CONDITIONAL` | Permission, state, or boolean checks |
-| `MATCH` | Exact text comparisons, such as locale or rank |
-| `SWITCH` | Numeric or boolean comparisons |
+- `TEXT` for static or formatted reusable text.
+- `NUMBER` for numeric values.
+- `RANDOM` for rotating tips, messages, or labels.
+- `CONDITIONAL` for permission, state, or boolean checks.
+- `MATCH` for exact text comparisons, such as locale or rank.
+- `SWITCH` for numeric or boolean comparisons.
 
 ## TEXT
 

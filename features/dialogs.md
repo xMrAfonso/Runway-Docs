@@ -8,13 +8,11 @@ Dialog support covers rich components and several plain string fields.
 
 ## Parsed Dialog Parts
 
-| Dialog area | Parsed fields |
-| --- | --- |
-| Titles and body | Dialog title, external title, plain message body text |
-| Items | Dialog item names, lore, and descriptions |
-| Inputs | Text input labels, initial values, boolean labels, number range labels |
-| Options | Single option labels and display text |
-| Buttons | Button labels and tooltips |
+- Titles and body: dialog title, external title, plain message body text.
+- Items: dialog item names, lore, and descriptions.
+- Inputs: text input labels, initial values, boolean labels, number range labels.
+- Options: single option labels and display text.
+- Buttons: button labels and tooltips.
 
 ## Plain Text Fields
 

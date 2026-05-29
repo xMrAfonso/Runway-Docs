@@ -2,10 +2,9 @@
 
 Runway looks at outgoing text packets before the player sees them. Whether it parses a line mostly comes down to prefix mode and the listener for that packet.
 
-| Mode | What Runway parses | How to skip one message |
-| --- | --- | --- |
-| `prefix.required: true` | Only text that starts with the configured prefix. | Leave the prefix off. |
-| `prefix.required: false` | Supported text automatically, unless a listener requires the prefix. | Start with `!` followed by the prefix, such as `!$`. |
+When `prefix.required` is `true`, Runway only parses text that starts with the configured prefix. Leave the prefix off to skip one message.
+
+When `prefix.required` is `false`, Runway parses supported text automatically unless a listener requires the prefix. Start with `!` followed by the prefix, such as `!$`, to skip one message.
 
 With `prefix.required: true`, only prefixed text is parsed:
 

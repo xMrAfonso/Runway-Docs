@@ -2,15 +2,13 @@
 
 Start with the symptom, then test the exact text with `/runway parse <text>` when possible.
 
-| Symptom | First thing to check |
-| --- | --- |
-| Raw tags are visible | Listener, prefix, and MiniMessage syntax |
-| PlaceholderAPI values are blank | See [PlaceholderAPI](../placeholders/placeholderapi.md) |
-| MiniPlaceholders values are stale | `miniPlaceholders.refresh-rate` |
-| Items are italic | `disableItalics` |
-| YAML fails to load | Quotes, indentation, and tabs |
-| Message disappears | Invalid MiniMessage or empty conditional output |
-| Players can use tags in chat | `listeners.chat.sanitize` |
+- Raw tags are visible: check the listener, prefix, and MiniMessage syntax.
+- PlaceholderAPI values are blank: see [PlaceholderAPI](../placeholders/placeholderapi.md).
+- MiniPlaceholders values are stale: check `miniPlaceholders.refresh-rate`.
+- Items are italic: check `disableItalics`.
+- YAML fails to load: check quotes, indentation, and tabs.
+- A message disappears: check for invalid MiniMessage or empty conditional output.
+- Players can use tags in chat: check `listeners.chat.sanitize`.
 
 ## Raw Tags Are Visible
 
@@ -24,11 +22,9 @@ If the command works, check the listener and prefix for the original text locati
 
 ## Placeholders Are Blank
 
-| Placeholder type | Check |
-| --- | --- |
-| PlaceholderAPI | Use the checks in [PlaceholderAPI](../placeholders/placeholderapi.md). |
-| MiniPlaceholders | Plugin installed, expansion installed, and refresh rate is not hiding recent changes. |
-| Custom Runway | File loaded, tag name matches, and any group condition is true. |
+- PlaceholderAPI: use the checks in [PlaceholderAPI](../placeholders/placeholderapi.md).
+- MiniPlaceholders: confirm the plugin and expansion are installed, and the refresh rate is not hiding recent changes.
+- Custom Runway placeholders: confirm the file loaded, the tag name matches, and any group condition is true.
 
 Inside Runway text, PlaceholderAPI uses Runway's tag syntax. The full syntax is on the PlaceholderAPI page.
 
@@ -50,12 +46,10 @@ Quote formatted values:
 value: "<gradient:#0050ff:#00d4ff>Hello</gradient>"
 ```
 
-| Problem | Fix |
-| --- | --- |
-| Unquoted `#` | Quote values with hex colors. |
-| Unquoted `:` | Quote long formatted strings and URLs. |
-| Broken indentation | Use spaces consistently. |
-| Tabs | Replace tabs with spaces. |
+- Unquoted `#`: quote values with hex colors.
+- Unquoted `:`: quote long formatted strings and URLs.
+- Broken indentation: use spaces consistently.
+- Tabs: replace tabs with spaces.
 
 {% hint style="warning" %}
 YAML accepts spaces for indentation, not tabs. Many config issues that look like Runway issues are actually YAML parse failures.

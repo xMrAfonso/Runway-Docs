@@ -8,22 +8,18 @@ The examples include the default `$` prefix. Replace it if your server uses a di
 
 ## Official Tools
 
-| Resource | Use it for |
-| --- | --- |
-| [MiniMessage documentation](https://docs.advntr.dev/minimessage/index.html) | Tag syntax, escaping, colors, decorations, click events, and hover events. |
-| [MiniMessage Web UI](https://webui.advntr.dev/) | Previewing MiniMessage before putting it into a config. |
+- [MiniMessage documentation](https://docs.advntr.dev/minimessage/index.html) for tag syntax, escaping, colors, decorations, click events, and hover events.
+- [MiniMessage Web UI](https://webui.advntr.dev/) for previewing MiniMessage before putting it into a config.
 
 ## Quick Reference
 
-| Goal | Example |
-| --- | --- |
-| Named color | `$<red>Red text` |
-| Hex color | `$<#00d4ff>Hex color` |
-| Bold text | `$<bold>Bold</bold>` |
-| Remove item italics | `$<!italic>Not italic` |
-| Underline | `$<underlined>Underlined</underlined>` |
-| Gradient | `$<gradient:#0050ff:#00d4ff>Gradient text</gradient>` |
-| Hover and click | `$<hover:show_text:'<gray>Click to join'><click:run_command:'/server lobby'><green>Lobby</green></click></hover>` |
+- Named color: `$<red>Red text`
+- Hex color: `$<#00d4ff>Hex color`
+- Bold text: `$<bold>Bold</bold>`
+- Remove item italics: `$<!italic>Not italic`
+- Underline: `$<underlined>Underlined</underlined>`
+- Gradient: `$<gradient:#0050ff:#00d4ff>Gradient text</gradient>`
+- Hover and click: `$<hover:show_text:'<gray>Click to join'><click:run_command:'/server lobby'><green>Lobby</green></click></hover>`
 
 ## Keep YAML Valid
 

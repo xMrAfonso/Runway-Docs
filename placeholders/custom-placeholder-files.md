@@ -35,11 +35,9 @@ $Visit <server_store>
 
 `prefix` is optional. It is useful when a file owns a group of related tags.
 
-| File prefix | Placeholder key | Tag you use |
-| --- | --- | --- |
-| None | `server_name` | `<server_name>` |
-| `server` | `name` | `<server_name>` |
-| `rank` | `vip_badge` | `<rank_vip_badge>` |
+- No file prefix with `server_name` creates `<server_name>`.
+- `prefix: server` with `name` creates `<server_name>`.
+- `prefix: rank` with `vip_badge` creates `<rank_vip_badge>`.
 
 ## Group Condition
 

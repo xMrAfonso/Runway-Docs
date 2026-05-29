@@ -45,12 +45,10 @@ listeners:
 
 Use this when a menu plugin controls inventory titles, item names, or lore.
 
-| Goal | Setting |
-| --- | --- |
-| Menu titles | `listeners.inventory.title.enable: true` |
-| Items inside menus | `listeners.inventory.items.enable: true` |
-| Item update packets | `listeners.items.enable: true` |
-| Remove default item italics | `disableItalics: true` |
+- Menu titles: `listeners.inventory.title.enable: true`
+- Items inside menus: `listeners.inventory.items.enable: true`
+- Item update packets: `listeners.items.enable: true`
+- Remove default item italics: `disableItalics: true`
 
 ## Require Prefix Only For Items
 
@@ -67,8 +65,6 @@ listeners:
 
 ## Debugging A Setup
 
-| Symptom | Try |
-| --- | --- |
-| Raw tags show | Check the listener and prefix mode. |
-| `/runway parse` works but plugin text does not | The packet location may not be enabled or supported. |
-| Items are italic | Set `disableItalics: true`. |
+- Raw tags show: check the listener and prefix mode.
+- `/runway parse` works but plugin text does not: the packet location may not be enabled or supported.
+- Items are italic: set `disableItalics: true`.

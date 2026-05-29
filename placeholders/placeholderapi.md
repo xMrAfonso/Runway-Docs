@@ -8,11 +8,9 @@ Inside Runway text, use `<papi:player_name>`. In other PlaceholderAPI-compatible
 
 ## Syntax
 
-| Context | Syntax |
-| --- | --- |
-| Runway text | `$<green>Hello <papi:player_name>` |
-| Long Runway alias | `<placeholderapi:player_name>` |
-| Another plugin reading PlaceholderAPI expansions | `%runway_server_name%` |
+- Runway text: `$<green>Hello <papi:player_name>`
+- Long Runway alias: `<placeholderapi:player_name>`
+- Other PlaceholderAPI-compatible plugins: `%runway_server_name%`
 
 Runway parses PlaceholderAPI output again, so PlaceholderAPI values may return MiniMessage or Runway tags.
 
@@ -20,19 +18,15 @@ Runway parses PlaceholderAPI output again, so PlaceholderAPI values may return M
 
 Custom Runway placeholders can be used in other PlaceholderAPI-compatible plugins:
 
-| Runway placeholder setup | PlaceholderAPI syntax |
-| --- | --- |
-| `server_name` | `%runway_server_name%` |
-| `prefix: server` and `name` | `%runway_server_name%` |
+- `server_name` becomes `%runway_server_name%`.
+- `prefix: server` with `name` also becomes `%runway_server_name%`.
 
 ## Checks When It Is Blank
 
-| Check | Why it matters |
-| --- | --- |
-| PlaceholderAPI is installed | Runway only registers this support when PlaceholderAPI is present. |
-| The expansion is installed | PlaceholderAPI placeholders usually come from separate expansions. |
-| Player context exists | Player placeholders need a receiving player. |
-| Syntax matches the context | Use `<papi:...>` inside Runway text and `%runway_...%` in other PlaceholderAPI-compatible plugins. |
+- PlaceholderAPI must be installed before Runway can register support.
+- The expansion for that placeholder must be installed.
+- Player placeholders need a receiving player.
+- Syntax depends on the context: use `<papi:...>` inside Runway text and `%runway_...%` in other PlaceholderAPI-compatible plugins.
 
 ## Setup Examples
 

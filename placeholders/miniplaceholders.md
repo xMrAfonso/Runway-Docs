@@ -14,7 +14,5 @@ $<green>Welcome, <player_name>!
 
 ## Refresh Rate
 
-| Refresh rate | Behavior |
-| --- | --- |
-| Positive number | Cache global placeholders and refresh every N seconds. |
-| `0` or lower | Refresh on every parse. More current, but more expensive. |
+- Positive values cache global placeholders and refresh every N seconds.
+- `0` or lower refreshes on every parse. This is more current, but more expensive.

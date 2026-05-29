@@ -14,21 +14,17 @@ After editing `settings.yml`, run `/runway reload`.
 
 ## Setting Reference
 
-| Setting | Default | What it controls |
-| --- | --- | --- |
-| `debug` | `false` | Extra diagnostic behavior, when supported by the build. |
-| `prefix.required` | `true` | Whether text must start with the prefix before Runway parses it. |
-| `prefix.value` | `$` | The marker Runway removes before parsing. |
-| `disableItalics` | `true` | Whether Runway adds `<!italic>` before parsed text. |
-| `miniPlaceholders.refresh-rate` | `30` | How often cached MiniPlaceholders audience globals refresh, in seconds. |
+- `debug`, default `false`: extra diagnostic behavior, when supported by the build.
+- `prefix.required`, default `true`: whether text must start with the prefix before Runway parses it.
+- `prefix.value`, default `$`: the marker Runway removes before parsing.
+- `disableItalics`, default `true`: whether Runway adds `<!italic>` before parsed text.
+- `miniPlaceholders.refresh-rate`, default `30`: how often cached MiniPlaceholders audience globals refresh, in seconds.
 
 ## Prefix Behavior
 
-| Setup | Result |
-| --- | --- |
-| `prefix.required: true` | Only text starting with `prefix.value` is parsed. |
-| `prefix.required: false` | Supported text is parsed automatically unless a listener requires the prefix. |
-| `prefix.value: "[mm]"` | Messages start with `[mm]` instead of `$`. |
+- `prefix.required: true`: only text starting with `prefix.value` is parsed.
+- `prefix.required: false`: supported text is parsed automatically unless a listener requires the prefix.
+- `prefix.value: "[mm]"`: messages start with `[mm]` instead of `$`.
 
 ## `debug`
 

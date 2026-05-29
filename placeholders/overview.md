@@ -2,11 +2,9 @@
 
 Runway supports three placeholder sources:
 
-| Source | Where it comes from | How you use it |
-| --- | --- | --- |
-| Custom Runway placeholders | `plugins/Runway/placeholders/*.yml` | `<server_name>` |
-| PlaceholderAPI | PlaceholderAPI plugin and expansions | See [PlaceholderAPI](placeholderapi.md) |
-| MiniPlaceholders | MiniPlaceholders plugin and expansions | Expansion-specific MiniPlaceholders tags |
+- Custom Runway placeholders from `plugins/Runway/placeholders/*.yml`, used as tags such as `<server_name>`.
+- PlaceholderAPI from the PlaceholderAPI plugin and its expansions. See [PlaceholderAPI](placeholderapi.md).
+- MiniPlaceholders from the MiniPlaceholders plugin and its expansions.
 
 {% hint style="info" %}
 Runway placeholders are MiniMessage tags. Use angle brackets in Runway text.
@@ -26,8 +24,6 @@ Group prefixes are added to the tag name. A group prefix of `global` and a place
 
 ## Good Naming Patterns
 
-| Pattern | Example | Why it helps |
-| --- | --- | --- |
-| Prefix by domain | `<server_name>` | Keeps global server tags grouped. |
-| Prefix by feature | `<shop_sale>` | Makes large configs easier to scan. |
-| Keep names lowercase | `<rank_badge>` | Matches Runway's lowercase lookup behavior. |
+- Prefix by domain, such as `<server_name>`, to keep global server tags grouped.
+- Prefix by feature, such as `<shop_sale>`, to make large configs easier to scan.
+- Keep names lowercase, such as `<rank_badge>`, to match Runway's lowercase lookup behavior.

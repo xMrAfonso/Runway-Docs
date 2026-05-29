@@ -6,12 +6,10 @@ Install Runway on the server. Players do not need to install anything.
 
 ## Requirements
 
-| Requirement | Notes |
-| --- | --- |
-| Paper `1.21+` | Use the version supported by your Runway build. |
-| Java `21+` | Or the Java version required by your Paper build. |
-| PlaceholderAPI | Optional. Needed for `<papi:...>` tags. |
-| MiniPlaceholders | Optional. Needed for MiniPlaceholders tags. |
+- Paper `1.21+`, or the version supported by your Runway build.
+- Java `21+`, or the Java version required by your Paper build.
+- PlaceholderAPI, optional. Needed for `<papi:...>` tags.
+- MiniPlaceholders, optional. Needed for MiniPlaceholders tags.
 
 ## Install Runway
 

@@ -2,11 +2,9 @@
 
 Player chat has one extra concern: players can type the text themselves. That makes `sanitize` the important setting.
 
-| Setting | Recommended | Why |
-| --- | --- | --- |
-| `enable` | `true` if you want chat formatting | Lets Runway inspect chat packets. |
-| `require-prefix` | Depends on your server | Prefix mode gives players explicit control. |
-| `sanitize` | `true` on public servers | Limits what player-written chat can resolve. |
+- `enable`: use `true` if you want chat formatting.
+- `require-prefix`: depends on your server. Prefix mode gives players explicit control.
+- `sanitize`: use `true` on public servers so player-written chat cannot resolve every tag.
 
 ## Sanitized Chat
 

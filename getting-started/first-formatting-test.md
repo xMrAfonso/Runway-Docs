@@ -56,8 +56,6 @@ To leave one message untouched, start it with `!$`:
 
 ## What to Try Next
 
-| Goal | Page |
-| --- | --- |
-| Prefix behavior | [How Runway Parses Text](how-runway-parses-text.md) |
-| Text locations | [Listeners](../configuration/listeners.md) |
-| Reusable tags | [Custom Placeholder Files](../placeholders/custom-placeholder-files.md) |
+- [How Runway Parses Text](how-runway-parses-text.md) for prefix behavior.
+- [Listeners](../configuration/listeners.md) for text locations.
+- [Custom Placeholder Files](../placeholders/custom-placeholder-files.md) for reusable tags.

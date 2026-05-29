@@ -8,12 +8,10 @@ Minecraft often renders item text in italics by default. `disableItalics: true` 
 
 ## What Controls What
 
-| Goal | Setting |
-| --- | --- |
-| Parse window titles | `listeners.inventory.title.enable` |
-| Parse items inside inventory windows | `listeners.inventory.items.enable` |
-| Parse individual item update packets | `listeners.items.enable` |
-| Remove default item italics | `disableItalics: true` |
+- Parse window titles with `listeners.inventory.title.enable`.
+- Parse items inside inventory windows with `listeners.inventory.items.enable`.
+- Parse individual item update packets with `listeners.items.enable`.
+- Remove default item italics with `disableItalics: true`.
 
 Keep `disableItalics: true` if you do not want formatted item names and lore to appear italic by default.
 

@@ -2,20 +2,16 @@
 
 Runway now separates main settings from placeholder groups.
 
-| Old file | New location |
-| --- | --- |
-| `plugins/Runway/config.yml` | `plugins/Runway/settings.yml` |
-| `plugins/Runway/placeholders.yml` | `plugins/Runway/placeholders/*.yml` |
+- `plugins/Runway/config.yml` is now `plugins/Runway/settings.yml`.
+- `plugins/Runway/placeholders.yml` is now split into `plugins/Runway/placeholders/*.yml`.
 
 ## Automatic Migration
 
 On startup, Runway checks for older files and migrates them when possible.
 
-| During migration | Result |
-| --- | --- |
-| `config.yml` is found | Runway creates `settings.yml` when possible. |
-| `placeholders.yml` is found | Runway creates `placeholders/migrated.yml` when possible. |
-| Old files are preserved | They may be renamed to backups such as `old-config.yml`. |
+- If `config.yml` is found, Runway creates `settings.yml` when possible.
+- If `placeholders.yml` is found, Runway creates `placeholders/migrated.yml` when possible.
+- Old files may be renamed to backups such as `old-config.yml`.
 
 ## Prefix Change
 
