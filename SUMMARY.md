@@ -28,6 +28,13 @@
 * [PlaceholderAPI](placeholders/placeholderapi.md)
 * [MiniPlaceholders](placeholders/miniplaceholders.md)
 
+## Examples
+
+* [Examples Overview](examples/README.md)
+* [Configuration Setups](examples/configuration-setups.md)
+* [Message Recipes](examples/message-recipes.md)
+* [Placeholder Recipes](examples/placeholder-recipes.md)
+
 ## Features
 
 * [Supported Text Locations](features/supported-text-locations.md)
@@ -39,4 +46,3 @@
 * [Commands and Permissions](reference/commands-and-permissions.md)
 * [Migration from Older Versions](reference/migration-from-older-versions.md)
 * [Troubleshooting](reference/troubleshooting.md)
-* [Examples](reference/examples.md)

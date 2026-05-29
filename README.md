@@ -5,7 +5,7 @@
   <p style="margin: 0;">
     <a href="getting-started/installation.md" style="display: inline-block; padding: 10px 16px; margin: 0 8px 8px 0; border-radius: 8px; background: #1f6feb; color: #ffffff; font-weight: 700; text-decoration: none;">Install Runway</a>
     <a href="getting-started/first-formatting-test.md" style="display: inline-block; padding: 10px 16px; margin: 0 8px 8px 0; border-radius: 8px; background: #ffffff; color: #1f6feb; border: 1px solid #b9d3ff; font-weight: 700; text-decoration: none;">Run a test</a>
-    <a href="reference/examples.md" style="display: inline-block; padding: 10px 16px; margin: 0 0 8px 0; border-radius: 8px; background: #ffffff; color: #24503a; border: 1px solid #bfe4ce; font-weight: 700; text-decoration: none;">See examples</a>
+    <a href="examples/README.md" style="display: inline-block; padding: 10px 16px; margin: 0 0 8px 0; border-radius: 8px; background: #ffffff; color: #24503a; border: 1px solid #bfe4ce; font-weight: 700; text-decoration: none;">See examples</a>
   </p>
 </div>
 
@@ -59,4 +59,5 @@ Older `config.yml` and `placeholders.yml` files are migrated automatically when 
   <a href="getting-started/first-formatting-test.md" style="display: block; padding: 16px; border: 1px solid #d9e7ff; border-radius: 10px; text-decoration: none; background: #fbfdff;"><strong>Check formatting</strong><br><span style="color: #526070;">Run the parse command and test another plugin</span></a>
   <a href="getting-started/how-runway-parses-text.md" style="display: block; padding: 16px; border: 1px solid #d9e7ff; border-radius: 10px; text-decoration: none; background: #fbfdff;"><strong>Understand prefixes</strong><br><span style="color: #526070;">Learn when Runway parses or ignores text</span></a>
   <a href="configuration/listeners.md" style="display: block; padding: 16px; border: 1px solid #d9e7ff; border-radius: 10px; text-decoration: none; background: #fbfdff;"><strong>Choose text locations</strong><br><span style="color: #526070;">Enable only the listeners you need</span></a>
+  <a href="examples/configuration-setups.md" style="display: block; padding: 16px; border: 1px solid #d9e7ff; border-radius: 10px; text-decoration: none; background: #fbfdff;"><strong>Copy a setup</strong><br><span style="color: #526070;">Use compact recipes for common configs</span></a>
 </div>

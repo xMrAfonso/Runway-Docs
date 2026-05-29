@@ -6,6 +6,13 @@ Runway uses Adventure MiniMessage, so most formatting you already know from Adve
 The examples include the default `$` prefix. Replace it if your server uses a different one.
 {% endhint %}
 
+## Official Tools
+
+| Resource | Use it for |
+| --- | --- |
+| [MiniMessage documentation](https://docs.advntr.dev/minimessage/index.html) | Tag syntax, escaping, colors, decorations, click events, and hover events. |
+| [MiniMessage Web UI](https://webui.advntr.dev/) | Previewing MiniMessage before putting it into a config. |
+
 ## Quick Reference
 
 | Goal | Example |

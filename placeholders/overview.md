@@ -5,7 +5,7 @@ Runway supports three placeholder sources:
 | Source | Where it comes from | How you use it |
 | --- | --- | --- |
 | Custom Runway placeholders | `plugins/Runway/placeholders/*.yml` | `<server_name>` |
-| PlaceholderAPI | PlaceholderAPI plugin and expansions | `<papi:player_name>` |
+| PlaceholderAPI | PlaceholderAPI plugin and expansions | See [PlaceholderAPI](placeholderapi.md) |
 | MiniPlaceholders | MiniPlaceholders plugin and expansions | Expansion-specific MiniPlaceholders tags |
 
 {% hint style="info" %}

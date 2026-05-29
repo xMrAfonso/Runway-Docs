@@ -1,6 +1,6 @@
 # Runway Tags
 
-Runway adds a small set of tags for text transforms, action bars, and PlaceholderAPI.
+Runway adds a small set of tags for text transforms and action bars.
 
 | Tag | Aliases | Purpose |
 | --- | --- | --- |
@@ -9,7 +9,6 @@ Runway adds a small set of tags for text transforms, action bars, and Placeholde
 | `<smallcaps>` | `<sc>` | Converts supported letters to small-cap characters. |
 | `<plain>` | None | Keeps visible text and removes nested styling. |
 | `<actionbar>` | `<ac>` | Sends content to the player's action bar. |
-| `<papi:...>` | `<placeholderapi:...>` | Resolves PlaceholderAPI placeholders. |
 
 ## Text Transform Tags
 
@@ -38,17 +37,4 @@ This tag only works with player context.
 `<actionbar>` needs a player target. It will not be useful in contexts where Runway cannot identify the receiving player.
 {% endhint %}
 
-## PlaceholderAPI Tag
-
-When PlaceholderAPI is installed, use PlaceholderAPI placeholders without percent signs:
-
-```text
-<papi:placeholder_name>
-<placeholderapi:placeholder_name>
-```
-
-```text
-$<green>Hello <papi:player_name>
-```
-
-Runway sends `%player_name%` to PlaceholderAPI, then parses the result as MiniMessage.
+PlaceholderAPI syntax lives in [PlaceholderAPI](../placeholders/placeholderapi.md).

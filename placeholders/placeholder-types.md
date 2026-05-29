@@ -63,7 +63,7 @@ Chooses output from a boolean expression.
 placeholders:
   donor_badge:
     type: CONDITIONAL
-    condition: "<papi:luckperms_in_group_vip> == true"
+    condition: "<vip_enabled> == true"
     if-true: "<gold>VIP</gold>"
     else: "<gray>Member</gray>"
 ```
@@ -78,7 +78,7 @@ Compares processed text and uses the first exact match.
 placeholders:
   greeting:
     type: MATCH
-    input: "<papi:player_locale>"
+    input: "fr_FR"
     case:
       - comparison: "en_US"
         output: "Hello!"
@@ -97,7 +97,7 @@ Evaluates numeric or boolean expressions by combining `input` with each comparis
 placeholders:
   online_status:
     type: SWITCH
-    input: "<papi:server_online>"
+    input: "150"
     case:
       - comparison: "> 100"
         output: "<green>Busy</green>"
@@ -106,7 +106,9 @@ placeholders:
     default: "<aqua>Normal</aqua>"
 ```
 
-If `<papi:server_online>` is `150`, Runway evaluates `150 > 100`.
+If `input` is `150`, Runway evaluates `150 > 100`.
+
+PlaceholderAPI examples are grouped on the [PlaceholderAPI](placeholderapi.md) page.
 
 ## `sanitized`
 

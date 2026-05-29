@@ -5,7 +5,7 @@ Start with the symptom, then test the exact text with `/runway parse <text>` whe
 | Symptom | First thing to check |
 | --- | --- |
 | Raw tags are visible | Listener, prefix, and MiniMessage syntax |
-| PlaceholderAPI values are blank | PlaceholderAPI install, expansion install, and player context |
+| PlaceholderAPI values are blank | See [PlaceholderAPI](../placeholders/placeholderapi.md) |
 | MiniPlaceholders values are stale | `miniPlaceholders.refresh-rate` |
 | Items are italic | `disableItalics` |
 | YAML fails to load | Quotes, indentation, and tabs |
@@ -26,11 +26,11 @@ If the command works, check the listener and prefix for the original text locati
 
 | Placeholder type | Check |
 | --- | --- |
-| PlaceholderAPI | Plugin installed, expansion installed, and player context is available. |
+| PlaceholderAPI | Use the checks in [PlaceholderAPI](../placeholders/placeholderapi.md). |
 | MiniPlaceholders | Plugin installed, expansion installed, and refresh rate is not hiding recent changes. |
 | Custom Runway | File loaded, tag name matches, and any group condition is true. |
 
-Inside Runway text, PlaceholderAPI uses `<papi:player_name>`, not `%player_name%`.
+Inside Runway text, PlaceholderAPI uses Runway's tag syntax. The full syntax is on the PlaceholderAPI page.
 
 ## Item Text Is Italic
 

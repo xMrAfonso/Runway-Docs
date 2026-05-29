@@ -46,10 +46,12 @@ $Visit <server_store>
 `condition` can disable every placeholder in the file unless the expression is true.
 
 ```yaml
-condition: "<papi:player_has_permission_runway.vip> == true"
+condition: "<event_active> == true"
 ```
 
 If the condition is false, placeholders from that file return empty text.
+
+For PlaceholderAPI-backed conditions, see [PlaceholderAPI](placeholderapi.md).
 
 ## Reloading
 
