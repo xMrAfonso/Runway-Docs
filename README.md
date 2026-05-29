@@ -14,52 +14,54 @@
 
 Runway lets server owners use MiniMessage formatting in text sent by other plugins. It works by reading outgoing server packets and converting marked text into Adventure components before the player receives it.
 
-Use Runway when you want gradients, hover text, colors, PlaceholderAPI values, MiniPlaceholders values, or reusable custom placeholders in places where another plugin only gives you plain text configuration.
+Use it when another plugin gives you a plain text box, but you want gradients, hover text, PlaceholderAPI values, MiniPlaceholders values, or reusable server-wide tags.
 
 {% hint style="info" %}
-If a plugin lets you configure plain text, Runway can often turn that text into rich Adventure components before it reaches the player.
+The usual workflow is simple: write MiniMessage in another plugin's config, add the Runway prefix if needed, then let Runway format the outgoing packet.
 {% endhint %}
 
 ## What Runway Can Format
 
-| Area | Examples |
+| Area | What Runway can touch |
 | --- | --- |
-| Chat and messages | Player chat, system messages, plugin messages |
-| HUD text | Action bars, boss bars, titles, subtitles |
-| Server UI | Tab list header and footer, inventory titles |
+| Messages | Player chat, system messages, plugin messages |
+| HUD | Action bars, boss bars, titles, subtitles |
+| Menus | Tab list header/footer, inventory titles |
 | Items | Display names, lore, item packets |
 | Dialogs | Text, buttons, inputs, dialog items |
-| Entities and names | Text displays, nameplates, tab list names, scoreboard team names |
+| Names | Text displays, nameplates, tab list names, scoreboard team names |
 
 ## Fast Example
 
-With the default prefix set to `$`, write this in another plugin message:
+With the default prefix, write this in another plugin message:
 
 ```text
 $<gradient:#0050ff:#00d4ff>Welcome to <server_name></gradient>
 ```
 
-Runway removes the `$`, parses the MiniMessage tags, resolves `<server_name>` if you configured it, and sends the formatted result to the player.
+Runway removes `$`, parses the MiniMessage tags, resolves `<server_name>` if you configured it, and sends the formatted result to the player.
 
 {% hint style="success" %}
-Use `/runway parse <text>` in game when you want to preview formatting before putting it into another plugin's config.
+Use `/runway parse <text>` when you want to test formatting before editing a larger config.
 {% endhint %}
 
 ## Files Created By Runway
 
 After the first startup, Runway uses:
 
-| File | Purpose |
+| File | Used for |
 | --- | --- |
-| `plugins/Runway/settings.yml` | Main behavior, prefix, listeners, MiniPlaceholders refresh rate |
-| `plugins/Runway/lang.yml` | Command feedback messages |
+| `plugins/Runway/settings.yml` | Prefixes, listeners, item italics, MiniPlaceholders refreshes |
+| `plugins/Runway/lang.yml` | Runway command messages |
 | `plugins/Runway/placeholders/*.yml` | Custom placeholder groups |
 
 Older `config.yml` and `placeholders.yml` files are migrated automatically when possible.
 
 ## Start Here
 
-1. [Install Runway](getting-started/installation.md)
-2. [Run your first formatting test](getting-started/first-formatting-test.md)
-3. [Learn how Runway decides what to parse](getting-started/how-runway-parses-text.md)
-4. [Configure listeners](configuration/listeners.md)
+| If you want to... | Go here |
+| --- | --- |
+| Install the plugin | [Installation](getting-started/installation.md) |
+| Check that formatting works | [First Formatting Test](getting-started/first-formatting-test.md) |
+| Understand prefixes | [How Runway Parses Text](getting-started/how-runway-parses-text.md) |
+| Choose what gets parsed | [Listeners](configuration/listeners.md) |

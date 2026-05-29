@@ -1,9 +1,9 @@
 # PlaceholderAPI
 
-Runway supports PlaceholderAPI when the PlaceholderAPI plugin is installed and enabled before Runway finishes loading.
+Runway supports PlaceholderAPI when the plugin is installed and enabled before Runway finishes loading.
 
 {% hint style="info" %}
-Inside Runway text, use `<papi:player_name>`. In PlaceholderAPI-compatible plugins that call Runway's expansion, use `%runway_placeholder%`.
+Inside Runway text, use `<papi:player_name>`. In other PlaceholderAPI-compatible plugins, use `%runway_placeholder%`.
 {% endhint %}
 
 ## Using PlaceholderAPI Inside Runway Text
@@ -14,8 +14,6 @@ Use the `<papi:...>` tag without percent signs:
 $<green>Hello <papi:player_name>
 ```
 
-This sends `%player_name%` to PlaceholderAPI.
-
 The long alias also works:
 
 ```text
@@ -24,7 +22,7 @@ $<placeholderapi:player_name>
 
 ## Nested PlaceholderAPI Output
 
-Runway parses PlaceholderAPI output again, so a PlaceholderAPI value can return another PlaceholderAPI placeholder or Runway tag.
+Runway parses PlaceholderAPI output again. That means a PlaceholderAPI value may return another PlaceholderAPI placeholder or a Runway tag.
 
 Example:
 
@@ -36,26 +34,26 @@ If that placeholder returns `<smallcaps>RunwayMC</smallcaps>`, Runway parses the
 
 ## Runway As A PlaceholderAPI Expansion
 
-When PlaceholderAPI is installed, Runway registers the expansion:
+Runway also registers its own PlaceholderAPI expansion:
 
 ```text
 %runway_<placeholder>%
 ```
 
-Example custom placeholder:
+For this custom placeholder:
 
 ```yaml
 text-placeholders:
   server_name: "RunwayMC"
 ```
 
-Use in PlaceholderAPI-compatible plugins:
+Use this in PlaceholderAPI-compatible plugins:
 
 ```text
 %runway_server_name%
 ```
 
-For a prefixed placeholder:
+The same final name is used when the placeholder comes from a prefixed group:
 
 ```yaml
 prefix: server
@@ -63,7 +61,7 @@ text-placeholders:
   name: "RunwayMC"
 ```
 
-Use:
+PlaceholderAPI syntax:
 
 ```text
 %runway_server_name%

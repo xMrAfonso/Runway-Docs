@@ -1,14 +1,6 @@
 # Placeholder Types
 
-Typed placeholders go under `placeholders`.
-
-```yaml
-placeholders:
-  example:
-    type: TEXT
-    sanitized: false
-    value: "Hello!"
-```
+Typed placeholders go under `placeholders`. Use them when plain text replacements are not enough.
 
 | Type | Best for |
 | --- | --- |
@@ -30,7 +22,7 @@ placeholders:
     value: "RunwayMC"
 ```
 
-Use:
+Tag:
 
 ```text
 <server_name>
@@ -61,11 +53,11 @@ placeholders:
       - "<aqua>Check /shop for rewards."
 ```
 
-An empty random list outputs empty text.
+An empty list returns empty text.
 
 ## CONDITIONAL
 
-Chooses output based on a boolean expression.
+Chooses output from a boolean expression.
 
 ```yaml
 placeholders:
@@ -80,7 +72,7 @@ placeholders:
 
 ## MATCH
 
-Compares processed text values and picks the first equal case.
+Compares processed text and uses the first exact match.
 
 ```yaml
 placeholders:
@@ -99,7 +91,7 @@ placeholders:
 
 ## SWITCH
 
-Evaluates numeric or boolean expressions by joining `input` and each case comparison.
+Evaluates numeric or boolean expressions by combining `input` with each comparison.
 
 ```yaml
 placeholders:
@@ -118,7 +110,7 @@ If `<papi:server_online>` is `150`, Runway evaluates `150 > 100`.
 
 ## `sanitized`
 
-Typed placeholders can opt in to sanitized contexts:
+Typed placeholders are blocked in sanitized chat unless you opt them in:
 
 ```yaml
 placeholders:
@@ -128,7 +120,7 @@ placeholders:
     value: "RunwayMC"
 ```
 
-When player chat sanitizing is enabled, only sanitized typed placeholders are available in the sanitized part of the message.
+This matters for player-written chat. Leave it off for placeholders that should only be used by trusted configs.
 
 {% hint style="warning" %}
 Only mark a placeholder as `sanitized: true` when it is safe for player-written chat contexts.

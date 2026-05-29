@@ -1,6 +1,6 @@
 # First Formatting Test
 
-This page gives you a fast smoke test before you start editing larger plugin configs.
+Start here when you want to know whether Runway is parsing at all.
 
 ## Use The Parse Command
 
@@ -10,10 +10,10 @@ Run this command in game:
 /runway parse <green>Hello from Runway!
 ```
 
-You should receive a formatted preview message.
+You should get a formatted preview back.
 
 {% hint style="success" %}
-The parse command is the fastest way to separate MiniMessage syntax problems from listener or plugin integration problems.
+If this command works but another plugin's text does not, the issue is probably a listener, prefix, or packet location.
 {% endhint %}
 
 ## Test Through Another Plugin
@@ -24,7 +24,7 @@ Put this in a message from another plugin:
 $<gradient:#0050ff:#00d4ff>Hello <bold>player</bold>!</gradient>
 ```
 
-If your prefix is still `$`, Runway will parse the message and remove the `$`.
+If your prefix is still `$`, Runway removes it and formats the rest.
 
 ## Test Without A Prefix
 
@@ -42,15 +42,15 @@ Then reload:
 /runway reload
 ```
 
-Now normal MiniMessage text can be parsed without `$`.
+Now MiniMessage can be parsed without `$`.
 
-To stop one message from being parsed while global prefix mode is disabled, start it with `!$`:
+To leave one message untouched, start it with `!$`:
 
 ```text
 !$<red>This stays unparsed.
 ```
 
-## What To Try Next
+## What to Try Next
 
 | Goal | Next page |
 | --- | --- |

@@ -6,8 +6,6 @@ Runway is a Paper plugin. Install it on the server, not on the client.
 
 ## Requirements
 
-Runway is a Paper plugin. Use a modern Paper server that matches the Runway release you downloaded. The current plugin metadata targets the Paper `1.21` API.
-
 | Requirement | Notes |
 | --- | --- |
 | Paper `1.21+` | Use the version supported by your Runway build. |
@@ -27,10 +25,10 @@ Runway is a Paper plugin. Use a modern Paper server that matches the Runway rele
 
 ## Check That It Loaded
 
-On startup, Runway logs when it enables. If PlaceholderAPI or MiniPlaceholders are installed and enabled, Runway also logs that support for them was enabled.
+On startup, Runway logs that it enabled. If PlaceholderAPI or MiniPlaceholders are present, it also logs support for them.
 
 {% hint style="warning" %}
-Runway depends on packet locations. If a message is not changing, first confirm that the matching listener is enabled in `settings.yml`.
+If a message is not changing, check the matching listener before changing the message itself.
 {% endhint %}
 
 If the server does not start, check:

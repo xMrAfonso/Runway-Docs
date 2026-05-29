@@ -6,26 +6,11 @@ Runway's main file is:
 plugins/Runway/settings.yml
 ```
 
-The exact generated file is the safest source of truth for your installed version. The settings below describe the current server-facing behavior.
+The generated file is the safest source of truth for your installed version. The settings below are the ones you are most likely to change.
 
 {% hint style="info" %}
-After editing `settings.yml`, run `/runway reload` unless the setting specifically requires a full server restart in your Runway release notes.
+After editing `settings.yml`, run `/runway reload`.
 {% endhint %}
-
-## Common Settings
-
-```yaml
-debug: false
-
-prefix:
-  required: true
-  value: $
-
-disableItalics: true
-
-miniPlaceholders:
-  refresh-rate: 30
-```
 
 ## Setting Reference
 
@@ -37,29 +22,33 @@ miniPlaceholders:
 | `disableItalics` | `true` | Whether Runway adds `<!italic>` before parsed text. |
 | `miniPlaceholders.refresh-rate` | `30` | How often cached MiniPlaceholders audience globals refresh, in seconds. |
 
+## Prefix Behavior
+
+| Setup | Result |
+| --- | --- |
+| `prefix.required: true` | Only text starting with `prefix.value` is parsed. |
+| `prefix.required: false` | Supported text is parsed automatically unless a listener requires the prefix. |
+| `prefix.value: "[mm]"` | Messages start with `[mm]` instead of `$`. |
+
 ## `debug`
 
 Enables extra diagnostic behavior if supported by your build. Keep this off on normal servers unless you are troubleshooting.
 
 ## `prefix.required`
 
-Controls whether text must start with the configured prefix before Runway parses it.
-
-When `true`:
+When `prefix.required` is `true`, this is parsed:
 
 ```text
 $<green>Hello
 ```
 
-is parsed, but:
+This is ignored:
 
 ```text
 <green>Hello
 ```
 
-is ignored.
-
-When `false`, Runway parses supported text automatically. Use `!$` to skip parsing for one message when the prefix value is `$`.
+When `prefix.required` is `false`, use `!$` to skip parsing for one message when the prefix is `$`.
 
 ## `prefix.value`
 
@@ -86,13 +75,6 @@ When enabled, Runway adds `<!italic>` before parsed text. This is mainly useful 
 ## `miniPlaceholders.refresh-rate`
 
 Controls how often Runway refreshes MiniPlaceholders audience global placeholders, in seconds.
-
-Use a positive value for cached refreshes:
-
-```yaml
-miniPlaceholders:
-  refresh-rate: 30
-```
 
 Use `0` or a negative value to refresh on every parse. That can be more current, but more expensive.
 

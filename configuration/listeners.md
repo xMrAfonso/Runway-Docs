@@ -3,25 +3,22 @@
 Listeners control which outgoing text locations Runway is allowed to edit.
 
 {% hint style="info" %}
-Turn on only the locations you want Runway to touch. This makes behavior easier to reason about when several plugins are sending text.
+Turn on the locations you want Runway to touch. Leave the rest alone.
 {% endhint %}
 
-Each listener has:
+## Common Listener Options
 
-```yaml
-enable: true
-require-prefix: false
-```
-
-`enable` turns that area on or off.
-
-`require-prefix` forces the global prefix for that listener when `prefix.required` is disabled globally.
+| Option | Meaning |
+| --- | --- |
+| `enable` | Turns that text location on or off. |
+| `require-prefix` | Requires the configured prefix for this listener when global prefix mode is disabled. |
+| `sanitize` | Chat-only. Limits what player-written chat can resolve. |
 
 If `prefix.required` is enabled globally, every listener requires the prefix regardless of its own `require-prefix` value.
 
 ## Example
 
-This parses most text automatically, but still requires `$` for item names and lore:
+This setup parses most text automatically, but still requires `$` for item update packets:
 
 ```yaml
 prefix:
@@ -30,67 +27,24 @@ prefix:
 
 listeners:
   items:
-    enable: true
     require-prefix: true
 ```
 
 ## Available Listeners
 
-| Listener | Text affected |
+| Listener | Text affected | Notes |
 | --- | --- |
-| `chat` | Player chat packets |
-| `systemMessages` | System and plugin messages |
-| `actionbar` | Action bar text |
-| `bossbar` | Boss bar titles |
-| `tablist` | Tab list header and footer |
-| `titles` | Titles and subtitles |
-| `dialogs` | Dialog text, inputs, buttons, and item descriptions |
-| `entityText` | Text displays and nameplate components |
-| `playerNames` | Tab list and scoreboard team names |
-| `inventory.title` | Inventory window titles |
-| `inventory.items` | Item names and lore in inventory windows |
-| `items` | Individual item update packets |
-
-```yaml
-listeners:
-  chat:
-    enable: true
-    require-prefix: false
-    sanitize: true
-  systemMessages:
-    enable: true
-    require-prefix: false
-  actionbar:
-    enable: true
-    require-prefix: false
-  bossbar:
-    enable: true
-    require-prefix: false
-  tablist:
-    enable: true
-    require-prefix: false
-  titles:
-    enable: true
-    require-prefix: false
-  dialogs:
-    enable: true
-    require-prefix: false
-  entityText:
-    enable: true
-    require-prefix: false
-  playerNames:
-    enable: true
-    require-prefix: false
-  inventory:
-    title:
-      enable: true
-      require-prefix: false
-    items:
-      enable: true
-      require-prefix: false
-  items:
-    enable: true
-    require-prefix: false
-```
+| `chat` | Player chat packets | Also supports `sanitize`. |
+| `systemMessages` | System and plugin messages | Common for plugin announcements. |
+| `actionbar` | Action bar text | Short HUD messages. |
+| `bossbar` | Boss bar titles | Applies when titles are created or updated. |
+| `tablist` | Tab list header and footer | Does not cover player names. |
+| `titles` | Titles and subtitles | Full-screen title packets. |
+| `dialogs` | Dialog text, inputs, buttons, and item descriptions | See [Dialogs](../features/dialogs.md). |
+| `entityText` | Text displays and nameplate components | Entity metadata components. |
+| `playerNames` | Tab list and scoreboard team names | Name-related packets. |
+| `inventory.title` | Inventory window titles | Menu titles. |
+| `inventory.items` | Item names and lore in inventory windows | Items inside open inventories. |
+| `items` | Individual item update packets | Item packets outside inventory windows. |
 
 Some older generated files may have different listener names. Keep the format your installed version generated unless you are migrating with a newer Runway release.

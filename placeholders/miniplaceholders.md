@@ -1,11 +1,9 @@
 # MiniPlaceholders
 
-Runway supports MiniPlaceholders when the MiniPlaceholders plugin is installed and enabled.
-
-MiniPlaceholders tags are resolved together with Runway's normal MiniMessage parsing.
+Runway resolves MiniPlaceholders tags during normal MiniMessage parsing when MiniPlaceholders is installed.
 
 {% hint style="info" %}
-Use the placeholder names documented by the MiniPlaceholders expansion you installed.
+Use the tag names documented by your MiniPlaceholders expansions.
 {% endhint %}
 
 Example:
@@ -14,18 +12,7 @@ Example:
 $<green>Welcome, <player_name>!
 ```
 
-Use the placeholder names provided by your MiniPlaceholders expansions.
-
 ## Refresh Rate
-
-Runway caches MiniPlaceholders audience global placeholders and refreshes them based on `settings.yml`.
-
-```yaml
-miniPlaceholders:
-  refresh-rate: 30
-```
-
-Lower values update more often. Higher values reduce refresh work. Use `0` or lower only if you need every parse to refresh the global placeholders.
 
 | Refresh rate | Behavior |
 | --- | --- |

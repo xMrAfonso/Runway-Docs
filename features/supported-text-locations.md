@@ -1,6 +1,6 @@
 # Supported Text Locations
 
-Runway parses text in the packet locations controlled by `settings.yml`.
+Use this as a map from visible text to the listener that controls it.
 
 | Location | Listener |
 | --- | --- |
@@ -18,45 +18,15 @@ Runway parses text in the packet locations controlled by `settings.yml`.
 | Item updates | `listeners.items` |
 
 {% hint style="info" %}
-If a text location is not changing, check both the listener and whether the text needs the configured prefix.
+If a text location is not changing, check its listener and prefix behavior first.
 {% endhint %}
 
-## Chat
+## Notes By Area
 
-Player chat messages can be parsed. See [Chat Formatting And Sanitizing](../formatting/chat-formatting-and-sanitizing.md).
-
-## System Messages
-
-Messages sent by plugins through system chat can be parsed.
-
-## Action Bars
-
-Action bar packet text can be parsed.
-
-## Boss Bars
-
-Boss bar titles can be parsed when the boss bar is created or its title is updated.
-
-## Tab List
-
-The tab list header and footer can be parsed.
-
-## Titles
-
-Title and subtitle text can be parsed.
-
-## Dialogs
-
-Dialog titles, body text, buttons, inputs, and dialog item descriptions can be parsed.
-
-## Entity Text
-
-Adventure component metadata can be parsed, including text displays and optional nameplate components.
-
-## Player Names
-
-Runway can parse player display names sent through scoreboard team packets and player info packets.
-
-## Items And Inventories
-
-Inventory titles, inventory item names/lore, and item packets can be parsed.
+| Area | Note |
+| --- | --- |
+| Chat | See [Chat Formatting and Sanitizing](../formatting/chat-formatting-and-sanitizing.md) before enabling unsanitized player input. |
+| Boss bars | Titles are parsed when the bar is created or updated. |
+| Dialogs | See [Dialogs](dialogs.md) for the exact fields Runway checks. |
+| Entity text | Covers Adventure component metadata such as text displays and optional nameplates. |
+| Items | See [Items and Inventories](items-and-inventories.md) for the difference between inventory items and item update packets. |

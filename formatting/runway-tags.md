@@ -1,73 +1,30 @@
 # Runway Tags
 
-Runway adds a few tags on top of normal MiniMessage.
+Runway adds a small set of tags for text transforms, action bars, and PlaceholderAPI.
 
 | Tag | Aliases | Purpose |
 | --- | --- | --- |
 | `<uppercase>` | `<upper>` | Converts content to uppercase. |
 | `<lowercase>` | `<lower>` | Converts content to lowercase. |
 | `<smallcaps>` | `<sc>` | Converts supported letters to small-cap characters. |
-| `<plain>` | None | Keeps visible text and strips nested styling. |
+| `<plain>` | None | Keeps visible text and removes nested styling. |
 | `<actionbar>` | `<ac>` | Sends content to the player's action bar. |
 | `<papi:...>` | `<placeholderapi:...>` | Resolves PlaceholderAPI placeholders. |
 
-## Uppercase
+## Text Transform Tags
 
-```text
-$<uppercase>hello</uppercase>
-$<upper>hello</upper>
-```
+| Goal | Example | Output |
+| --- | --- | --- |
+| Uppercase | `$<uppercase>hello</uppercase>` | `HELLO` |
+| Lowercase | `$<lowercase>HELLO</lowercase>` | `hello` |
+| Small caps | `$<smallcaps>RunwayMC</smallcaps>` | Small-cap characters where supported |
+| Plain text | `$<plain><red>Hello</red> <bold>World</bold></plain>` | `Hello World` |
 
-Output:
-
-```text
-HELLO
-```
-
-## Lowercase
-
-```text
-$<lowercase>HELLO</lowercase>
-$<lower>HELLO</lower>
-```
-
-Output:
-
-```text
-hello
-```
-
-## Small Caps
-
-```text
-$<smallcaps>RunwayMC</smallcaps>
-$<sc>RunwayMC</sc>
-```
-
-This converts supported letters to small-cap characters.
-
-## Plain
-
-`<plain>` keeps visible text and strips nested MiniMessage styling.
-
-```text
-$<plain><red>Hello</red> <bold>World</bold></plain>
-```
-
-Output:
-
-```text
-Hello World
-```
+The shorter aliases work too: `<upper>`, `<lower>`, and `<sc>`.
 
 ## Action Bar
 
 `<actionbar>` sends the enclosed content to the player's action bar and removes it from the original message.
-
-Aliases:
-
-- `<actionbar>`
-- `<ac>`
 
 Example:
 
@@ -83,14 +40,12 @@ This tag only works with player context.
 
 ## PlaceholderAPI Tag
 
-When PlaceholderAPI is installed and enabled, Runway registers:
+When PlaceholderAPI is installed, use PlaceholderAPI placeholders without percent signs:
 
 ```text
 <papi:placeholder_name>
 <placeholderapi:placeholder_name>
 ```
-
-Example:
 
 ```text
 $<green>Hello <papi:player_name>

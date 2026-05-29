@@ -1,12 +1,12 @@
 # MiniMessage Basics
 
-Runway uses Adventure MiniMessage. You can use normal MiniMessage tags in text that Runway parses.
+Runway uses Adventure MiniMessage, so most formatting you already know from Adventure works here too.
 
 {% hint style="info" %}
-These examples include the default Runway prefix `$`. If your prefix is different, replace `$` with your configured value.
+The examples include the default `$` prefix. Replace it if your server uses a different one.
 {% endhint %}
 
-## Common Tags
+## Quick Reference
 
 | Goal | Example |
 | --- | --- |
@@ -14,42 +14,13 @@ These examples include the default Runway prefix `$`. If your prefix is differen
 | Hex color | `$<#00d4ff>Hex color` |
 | Bold text | `$<bold>Bold</bold>` |
 | Remove item italics | `$<!italic>Not italic` |
+| Underline | `$<underlined>Underlined</underlined>` |
 | Gradient | `$<gradient:#0050ff:#00d4ff>Gradient text</gradient>` |
-
-## Colors
-
-```text
-$<red>Red text
-$<green>Green text
-$<#00d4ff>Hex color
-```
-
-## Decoration
-
-```text
-$<bold>Bold</bold>
-$<italic>Italic</italic>
-$<!italic>Not italic
-$<underlined>Underlined</underlined>
-```
-
-## Gradients
-
-```text
-$<gradient:#0050ff:#00d4ff>Gradient text</gradient>
-```
-
-## Click And Hover
-
-```text
-$<hover:show_text:'<gray>Click to join'><click:run_command:'/server lobby'><green>Lobby</green></click></hover>
-```
+| Hover and click | `$<hover:show_text:'<gray>Click to join'><click:run_command:'/server lobby'><green>Lobby</green></click></hover>` |
 
 ## Keep YAML Valid
 
-When putting MiniMessage in YAML, quote values that contain `:`, `#`, `<`, `>`, or long formatted strings.
-
-Good:
+Quote formatted values in YAML, especially when they contain `:`, `#`, `<`, or `>`.
 
 ```yaml
 message: "$<gradient:#0050ff:#00d4ff>Hello</gradient>"

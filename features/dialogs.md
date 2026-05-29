@@ -1,16 +1,9 @@
 # Dialogs
 
-Runway can parse Minecraft dialog packets when the `dialogs` listener is enabled.
-
-```yaml
-listeners:
-  dialogs:
-    enable: true
-    require-prefix: false
-```
+Runway can parse Minecraft dialog packets when `listeners.dialogs.enable` is `true`.
 
 {% hint style="info" %}
-Dialog support covers both visible components and several plain string fields. Plain string fields can still use placeholders, but they cannot keep color formatting after conversion back to plain text.
+Dialog support covers rich components and several plain string fields.
 {% endhint %}
 
 ## Parsed Dialog Parts
@@ -25,4 +18,4 @@ Dialog support covers both visible components and several plain string fields. P
 
 ## Plain Text Fields
 
-Some dialog fields are plain strings, not rich components. Runway still parses them, then converts the result back to plain text. Formatting colors cannot remain in those plain string fields, but placeholders and text-transforming tags can still be useful.
+Some dialog fields are plain strings, not rich components. Runway still parses them, then converts the result back to plain text. Colors cannot survive that conversion, but placeholders and text-transforming tags can still be useful.

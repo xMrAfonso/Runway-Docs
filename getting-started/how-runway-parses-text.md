@@ -1,13 +1,13 @@
 # How Runway Parses Text
 
-Runway receives text from packets before the player sees it.
+Runway looks at outgoing text packets before the player sees them. Whether it parses a line mostly comes down to prefix mode and the listener for that packet.
 
 <table>
   <thead>
     <tr>
       <th>Mode</th>
       <th>What Runway Parses</th>
-      <th>How To Skip One Message</th>
+      <th>How to skip one message</th>
     </tr>
   </thead>
   <tbody>
@@ -24,19 +24,19 @@ Runway receives text from packets before the player sees it.
   </tbody>
 </table>
 
-If a prefix is required, Runway only parses text that starts with your configured prefix. With the default prefix, this means the text must start with `$`.
+With `prefix.required: true`, only prefixed text is parsed:
 
 ```text
 $<red>Alert</red>
 ```
 
-Runway removes the prefix, then parses:
+Runway removes the prefix and parses the rest:
 
 ```text
 <red>Alert</red>
 ```
 
-If prefix mode is disabled, Runway tries to parse text automatically. You can opt out of one line by starting it with `!` followed by the prefix.
+With `prefix.required: false`, supported text is parsed automatically. Add `!` before the prefix to opt out for one line:
 
 ```text
 !$<red>This line will not be parsed</red>
@@ -47,7 +47,7 @@ If prefix mode is disabled, Runway tries to parse text automatically. You can op
 If a line contains invalid MiniMessage, Runway leaves that packet unchanged. Use `/runway parse <text>` to test formatting before putting it into another plugin's config.
 
 {% hint style="danger" %}
-Invalid tags are not partially fixed. Test complicated gradients, hover text, and click events before shipping them to a live config.
+Runway does not try to repair broken MiniMessage. Test complicated gradients, hover text, and click events with `/runway parse`.
 {% endhint %}
 
 ## Item Italics

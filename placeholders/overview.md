@@ -9,22 +9,20 @@ Runway supports three placeholder sources:
 | MiniPlaceholders | MiniPlaceholders plugin and expansions | Expansion-specific MiniPlaceholders tags |
 
 {% hint style="info" %}
-Custom Runway placeholders are MiniMessage tags, so they use angle brackets rather than percent signs.
+Runway placeholders are MiniMessage tags. Use angle brackets in Runway text.
 {% endhint %}
 
-Custom Runway placeholders are MiniMessage tags. If you define a placeholder named `server_name`, you use it as:
+If you define `server_name`, use it like this:
 
 ```text
 $Welcome to <server_name>
 ```
 
-If the placeholder group has a prefix, Runway adds the prefix to the tag name. A group prefix of `global` and a placeholder named `server` becomes:
+Group prefixes are added to the tag name. A group prefix of `global` and a placeholder named `server` becomes:
 
 ```text
 <global_server>
 ```
-
-Custom placeholder names are matched in lowercase.
 
 ## Good Naming Patterns
 

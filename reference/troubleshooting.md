@@ -12,39 +12,27 @@ Start with the symptom, then test the exact text with `/runway parse <text>` whe
 | Message disappears | Invalid MiniMessage or empty conditional output |
 | Players can use tags in chat | `listeners.chat.sanitize` |
 
-## My Text Shows The Raw Tags
+## Raw Tags Are Visible
 
-Check:
-
-- The listener for that text location is enabled.
-- The text starts with the configured prefix if a prefix is required.
-- The text is sent through a supported packet location.
-- The MiniMessage syntax is valid.
-
-Test the same text with:
+Test the same text first:
 
 ```text
-/runway parse <text>
+/runway parse <red>Example
 ```
 
-## PlaceholderAPI Placeholders Do Not Work
+If the command works, check the listener and prefix for the original text location.
 
-Check:
+## Placeholders Are Blank
 
-- PlaceholderAPI is installed.
-- The expansion for that placeholder is installed.
-- You are using `<papi:player_name>`, not `%player_name%`, inside MiniMessage text.
-- The placeholder has player context if it needs a player.
+| Placeholder type | Check |
+| --- | --- |
+| PlaceholderAPI | Plugin installed, expansion installed, and player context is available. |
+| MiniPlaceholders | Plugin installed, expansion installed, and refresh rate is not hiding recent changes. |
+| Custom Runway | File loaded, tag name matches, and any group condition is true. |
 
-## MiniPlaceholders Do Not Work
+Inside Runway text, PlaceholderAPI uses `<papi:player_name>`, not `%player_name%`.
 
-Check:
-
-- MiniPlaceholders is installed and enabled.
-- The MiniPlaceholders expansion providing the tag is installed.
-- Your `miniPlaceholders.refresh-rate` is not so high that you are seeing stale global values.
-
-## Items Are Italic
+## Item Text Is Italic
 
 Set:
 
@@ -62,12 +50,12 @@ Quote formatted values:
 value: "<gradient:#0050ff:#00d4ff>Hello</gradient>"
 ```
 
-Common YAML problems:
-
-- Unquoted `#` starts a comment.
-- Unquoted `:` can break mappings.
-- Incorrect indentation breaks nested sections.
-- Tabs are not valid indentation in YAML.
+| Problem | Fix |
+| --- | --- |
+| Unquoted `#` | Quote values with hex colors. |
+| Unquoted `:` | Quote long formatted strings and URLs. |
+| Broken indentation | Use spaces consistently. |
+| Tabs | Replace tabs with spaces. |
 
 {% hint style="warning" %}
 YAML accepts spaces for indentation, not tabs. Many config issues that look like Runway issues are actually YAML parse failures.
@@ -77,7 +65,7 @@ YAML accepts spaces for indentation, not tabs. Many config issues that look like
 
 The MiniMessage syntax may be invalid, or a conditional placeholder may be returning empty text.
 
-Check the server console for YAML load warnings and test the message with `/runway parse`.
+Check the server console for YAML load warnings, then test the message with `/runway parse`.
 
 ## Players Can Use Tags In Chat
 

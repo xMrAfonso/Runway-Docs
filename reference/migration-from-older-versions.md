@@ -1,18 +1,6 @@
-# Migration From Older Versions
+# Migration from Older Versions
 
-Older Runway versions used:
-
-```text
-plugins/Runway/config.yml
-plugins/Runway/placeholders.yml
-```
-
-Current versions use:
-
-```text
-plugins/Runway/settings.yml
-plugins/Runway/placeholders/*.yml
-```
+Runway now separates main settings from placeholder groups.
 
 | Old file | New location |
 | --- | --- |
@@ -23,15 +11,15 @@ plugins/Runway/placeholders/*.yml
 
 On startup, Runway checks for older files and migrates them when possible.
 
-Typical results:
-
-- `config.yml` becomes `settings.yml`.
-- `placeholders.yml` becomes `placeholders/migrated.yml`.
-- Old files are renamed to backup files such as `old-config.yml` and `old-placeholders.yml`.
+| During migration | Result |
+| --- | --- |
+| `config.yml` is found | Runway creates `settings.yml` when possible. |
+| `placeholders.yml` is found | Runway creates `placeholders/migrated.yml` when possible. |
+| Old files are preserved | They may be renamed to backups such as `old-config.yml`. |
 
 ## Prefix Change
 
-Very old configs used separate `[mm]` and `[p]` prefix behavior. Current Runway uses one configured prefix:
+Very old configs used separate `[mm]` and `[p]` prefix behavior. Current Runway uses one prefix:
 
 ```yaml
 prefix:
@@ -43,7 +31,7 @@ If you want the old visual marker, set `prefix.value` to `[mm]`.
 
 ## Placeholder Folder
 
-Instead of one `placeholders.yml`, put each placeholder group in its own file:
+Instead of one `placeholders.yml`, put related placeholder groups in separate files:
 
 ```text
 plugins/Runway/placeholders/global.yml
@@ -58,5 +46,5 @@ Then run:
 ```
 
 {% hint style="success" %}
-After migration, keep each placeholder group in its own file. It makes future changes easier and reduces YAML merge mistakes.
+Separate files make large placeholder sets easier to review and maintain.
 {% endhint %}
