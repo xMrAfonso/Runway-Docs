@@ -1,27 +1,43 @@
-# Table of contents
+# Summary
 
-* [Welcome](README.md)
+* [Runway Documentation](README.md)
 
 ## Getting Started
 
-* [Getting started](getting-started/getting-started.md)
-* [Quickstart](getting-started/quickstart.md)
-* [Your first project](getting-started/your-first-project.md)
+* [Installation](getting-started/installation.md)
+* [First Formatting Test](getting-started/first-formatting-test.md)
+* [How Runway Parses Text](getting-started/how-runway-parses-text.md)
 
-## Core concepts
+## Configuration
 
-* [Core concepts](core-concepts/core-concepts.md)
-* [Workspaces and projects](core-concepts/workspaces-and-projects.md)
-* [Permissions](core-concepts/permissions.md)
+* [Settings](configuration/settings.md)
+* [Listeners](configuration/listeners.md)
+* [Language Messages](configuration/language-messages.md)
 
-## Guides
+## Formatting
 
-* [Guides](guides/guides.md)
-* [Custom domains](guides/custom-domains.md)
-* [Automations](guides/automations.md)
+* [MiniMessage Basics](formatting/minimessage-basics.md)
+* [Runway Tags](formatting/runway-tags.md)
+* [Chat Formatting And Sanitizing](formatting/chat-formatting-and-sanitizing.md)
+
+## Placeholders
+
+* [Placeholder Overview](placeholders/overview.md)
+* [Custom Placeholder Files](placeholders/custom-placeholder-files.md)
+* [Placeholder Types](placeholders/placeholder-types.md)
+* [PlaceholderAPI](placeholders/placeholderapi.md)
+* [MiniPlaceholders](placeholders/miniplaceholders.md)
+
+## Features
+
+* [Supported Text Locations](features/supported-text-locations.md)
+* [Items And Inventories](features/items-and-inventories.md)
+* [Dialogs](features/dialogs.md)
 
 ## Reference
 
-* [Reference](reference/reference.md)
-* [Configuration](reference/configuration.md)
-* [Glossary](reference/glossary.md)
+* [Commands And Permissions](reference/commands-and-permissions.md)
+* [Migration From Older Versions](reference/migration-from-older-versions.md)
+* [Troubleshooting](reference/troubleshooting.md)
+* [Examples](reference/examples.md)
+
