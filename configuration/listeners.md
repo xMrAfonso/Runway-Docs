@@ -2,18 +2,17 @@
 
 Listeners control which outgoing text locations Runway is allowed to edit.
 
-<div style="padding: 16px 18px; border: 1px solid #d9e7ff; border-radius: 12px; background: #f7fbff;">
-  <strong>Rule of thumb:</strong>
-  <span style="color: #526070;">turn on the locations you want Runway to touch and leave the rest alone.</span>
-</div>
+{% hint style="info" %}
+Turn on the locations you want Runway to touch and leave the rest alone.
+{% endhint %}
 
 ## Common Listener Options
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 14px 0;">
-  <div style="padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; background: #ffffff;"><strong><code>enable</code></strong><br><span style="color: #526070;">Turns that text location on or off.</span></div>
-  <div style="padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; background: #ffffff;"><strong><code>require-prefix</code></strong><br><span style="color: #526070;">Requires the configured prefix for this listener when global prefix mode is disabled.</span></div>
-  <div style="padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; background: #ffffff;"><strong><code>sanitize</code></strong><br><span style="color: #526070;">Chat-only. Limits what player-written chat can resolve.</span></div>
-</div>
+| Option | Meaning |
+| --- | --- |
+| `enable` | Turns that text location on or off. |
+| `require-prefix` | Requires the configured prefix for this listener when global prefix mode is disabled. |
+| `sanitize` | Chat-only. Limits what player-written chat can resolve. |
 
 If `prefix.required` is enabled globally, every listener requires the prefix regardless of its own `require-prefix` value.
 

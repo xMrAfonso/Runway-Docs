@@ -2,27 +2,10 @@
 
 Runway looks at outgoing text packets before the player sees them. Whether it parses a line mostly comes down to prefix mode and the listener for that packet.
 
-<table style="width: 100%; border-collapse: separate; border-spacing: 0; margin: 16px 0; border: 1px solid #d9e7ff; border-radius: 10px; overflow: hidden;">
-  <thead>
-    <tr style="background: #f7fbff;">
-      <th style="text-align: left; padding: 12px;">Mode</th>
-      <th style="text-align: left; padding: 12px;">What Runway parses</th>
-      <th style="text-align: left; padding: 12px;">How to skip one message</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;"><code>prefix.required: true</code></td>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;">Only text that starts with the configured prefix.</td>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;">Leave the prefix off.</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;"><code>prefix.required: false</code></td>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;">Supported text automatically, unless a listener requires the prefix.</td>
-      <td style="padding: 12px; border-top: 1px solid #e7eef8;">Start with <code>!</code> followed by the prefix, such as <code>!$</code>.</td>
-    </tr>
-  </tbody>
-</table>
+| Mode | What Runway parses | How to skip one message |
+| --- | --- | --- |
+| `prefix.required: true` | Only text that starts with the configured prefix. | Leave the prefix off. |
+| `prefix.required: false` | Supported text automatically, unless a listener requires the prefix. | Start with `!` followed by the prefix, such as `!$`. |
 
 With `prefix.required: true`, only prefixed text is parsed:
 
