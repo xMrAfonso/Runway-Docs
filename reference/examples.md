@@ -1,5 +1,11 @@
 # Examples
 
+Use these as copyable starting points, then change names, colors, and PlaceholderAPI keys to match your server.
+
+{% hint style="info" %}
+Quote YAML values that contain MiniMessage tags, hex colors, URLs, or colons.
+{% endhint %}
+
 ## Server Branding
 
 `plugins/Runway/placeholders/global.yml`
@@ -38,6 +44,13 @@ Usage:
 $<rank_greeting> <papi:player_name>!
 ```
 
+<details>
+<summary>What this example does</summary>
+
+It reads the player's primary LuckPerms group through PlaceholderAPI, compares the exact group name, and returns the first matching greeting. If no case matches, it uses the `default` value.
+
+</details>
+
 ## Online Count Status
 
 ```yaml
@@ -59,6 +72,13 @@ Usage:
 $Status: <online_status>
 ```
 
+<details>
+<summary>What this example does</summary>
+
+It combines the PlaceholderAPI online count with each comparison. If the server has `150` players online, Runway evaluates `150 > 100` for the first case.
+
+</details>
+
 ## Random Tips
 
 ```yaml
@@ -76,4 +96,3 @@ Usage:
 ```text
 $Tip: <tip>
 ```
-

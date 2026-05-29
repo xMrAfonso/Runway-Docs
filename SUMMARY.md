@@ -18,7 +18,7 @@
 
 * [MiniMessage Basics](formatting/minimessage-basics.md)
 * [Runway Tags](formatting/runway-tags.md)
-* [Chat Formatting And Sanitizing](formatting/chat-formatting-and-sanitizing.md)
+* [Chat Formatting and Sanitizing](formatting/chat-formatting-and-sanitizing.md)
 
 ## Placeholders
 
@@ -31,13 +31,12 @@
 ## Features
 
 * [Supported Text Locations](features/supported-text-locations.md)
-* [Items And Inventories](features/items-and-inventories.md)
+* [Items and Inventories](features/items-and-inventories.md)
 * [Dialogs](features/dialogs.md)
 
 ## Reference
 
-* [Commands And Permissions](reference/commands-and-permissions.md)
-* [Migration From Older Versions](reference/migration-from-older-versions.md)
+* [Commands and Permissions](reference/commands-and-permissions.md)
+* [Migration from Older Versions](reference/migration-from-older-versions.md)
 * [Troubleshooting](reference/troubleshooting.md)
 * [Examples](reference/examples.md)
-

@@ -8,6 +8,10 @@ plugins/Runway/settings.yml
 
 The exact generated file is the safest source of truth for your installed version. The settings below describe the current server-facing behavior.
 
+{% hint style="info" %}
+After editing `settings.yml`, run `/runway reload` unless the setting specifically requires a full server restart in your Runway release notes.
+{% endhint %}
+
 ## Common Settings
 
 ```yaml
@@ -22,6 +26,16 @@ disableItalics: true
 miniPlaceholders:
   refresh-rate: 30
 ```
+
+## Setting Reference
+
+| Setting | Default | What it controls |
+| --- | --- | --- |
+| `debug` | `false` | Extra diagnostic behavior, when supported by the build. |
+| `prefix.required` | `true` | Whether text must start with the prefix before Runway parses it. |
+| `prefix.value` | `$` | The marker Runway removes before parsing. |
+| `disableItalics` | `true` | Whether Runway adds `<!italic>` before parsed text. |
+| `miniPlaceholders.refresh-rate` | `30` | How often cached MiniPlaceholders audience globals refresh, in seconds. |
 
 ## `debug`
 
@@ -82,3 +96,6 @@ miniPlaceholders:
 
 Use `0` or a negative value to refresh on every parse. That can be more current, but more expensive.
 
+{% hint style="warning" %}
+Refreshing MiniPlaceholders on every parse can be useful while testing, but busy servers should usually keep a positive refresh rate.
+{% endhint %}

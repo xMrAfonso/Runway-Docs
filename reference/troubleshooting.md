@@ -1,5 +1,17 @@
 # Troubleshooting
 
+Start with the symptom, then test the exact text with `/runway parse <text>` when possible.
+
+| Symptom | First thing to check |
+| --- | --- |
+| Raw tags are visible | Listener, prefix, and MiniMessage syntax |
+| PlaceholderAPI values are blank | PlaceholderAPI install, expansion install, and player context |
+| MiniPlaceholders values are stale | `miniPlaceholders.refresh-rate` |
+| Items are italic | `disableItalics` |
+| YAML fails to load | Quotes, indentation, and tabs |
+| Message disappears | Invalid MiniMessage or empty conditional output |
+| Players can use tags in chat | `listeners.chat.sanitize` |
+
 ## My Text Shows The Raw Tags
 
 Check:
@@ -57,6 +69,10 @@ Common YAML problems:
 - Incorrect indentation breaks nested sections.
 - Tabs are not valid indentation in YAML.
 
+{% hint style="warning" %}
+YAML accepts spaces for indentation, not tabs. Many config issues that look like Runway issues are actually YAML parse failures.
+{% endhint %}
+
 ## A Message Disappears
 
 The MiniMessage syntax may be invalid, or a conditional placeholder may be returning empty text.
@@ -74,4 +90,3 @@ listeners:
 ```
 
 Only disable this for trusted environments.
-

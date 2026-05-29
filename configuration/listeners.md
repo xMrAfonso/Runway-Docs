@@ -2,6 +2,10 @@
 
 Listeners control which outgoing text locations Runway is allowed to edit.
 
+{% hint style="info" %}
+Turn on only the locations you want Runway to touch. This makes behavior easier to reason about when several plugins are sending text.
+{% endhint %}
+
 Each listener has:
 
 ```yaml
@@ -31,6 +35,21 @@ listeners:
 ```
 
 ## Available Listeners
+
+| Listener | Text affected |
+| --- | --- |
+| `chat` | Player chat packets |
+| `systemMessages` | System and plugin messages |
+| `actionbar` | Action bar text |
+| `bossbar` | Boss bar titles |
+| `tablist` | Tab list header and footer |
+| `titles` | Titles and subtitles |
+| `dialogs` | Dialog text, inputs, buttons, and item descriptions |
+| `entityText` | Text displays and nameplate components |
+| `playerNames` | Tab list and scoreboard team names |
+| `inventory.title` | Inventory window titles |
+| `inventory.items` | Item names and lore in inventory windows |
+| `items` | Individual item update packets |
 
 ```yaml
 listeners:
@@ -75,4 +94,3 @@ listeners:
 ```
 
 Some older generated files may have different listener names. Keep the format your installed version generated unless you are migrating with a newer Runway release.
-

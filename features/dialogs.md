@@ -9,25 +9,20 @@ listeners:
     require-prefix: false
 ```
 
+{% hint style="info" %}
+Dialog support covers both visible components and several plain string fields. Plain string fields can still use placeholders, but they cannot keep color formatting after conversion back to plain text.
+{% endhint %}
+
 ## Parsed Dialog Parts
 
-Runway parses:
-
-- Dialog title
-- External title
-- Plain message body text
-- Dialog item names and lore
-- Dialog item descriptions
-- Text input labels
-- Text input initial values
-- Boolean input labels
-- Single option input labels
-- Single option display text
-- Number range labels
-- Button labels
-- Button tooltips
+| Dialog area | Parsed fields |
+| --- | --- |
+| Titles and body | Dialog title, external title, plain message body text |
+| Items | Dialog item names, lore, and descriptions |
+| Inputs | Text input labels, initial values, boolean labels, number range labels |
+| Options | Single option labels and display text |
+| Buttons | Button labels and tooltips |
 
 ## Plain Text Fields
 
 Some dialog fields are plain strings, not rich components. Runway still parses them, then converts the result back to plain text. Formatting colors cannot remain in those plain string fields, but placeholders and text-transforming tags can still be useful.
-

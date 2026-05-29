@@ -10,6 +10,15 @@ placeholders:
     value: "Hello!"
 ```
 
+| Type | Best for |
+| --- | --- |
+| `TEXT` | Static or formatted reusable text |
+| `NUMBER` | Numeric values |
+| `RANDOM` | Rotating tips, messages, or labels |
+| `CONDITIONAL` | Permission, state, or boolean checks |
+| `MATCH` | Exact text comparisons, such as locale or rank |
+| `SWITCH` | Numeric or boolean comparisons |
+
 ## TEXT
 
 Inserts MiniMessage text.
@@ -121,3 +130,6 @@ placeholders:
 
 When player chat sanitizing is enabled, only sanitized typed placeholders are available in the sanitized part of the message.
 
+{% hint style="warning" %}
+Only mark a placeholder as `sanitized: true` when it is safe for player-written chat contexts.
+{% endhint %}

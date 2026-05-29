@@ -14,6 +14,11 @@ plugins/Runway/settings.yml
 plugins/Runway/placeholders/*.yml
 ```
 
+| Old file | New location |
+| --- | --- |
+| `plugins/Runway/config.yml` | `plugins/Runway/settings.yml` |
+| `plugins/Runway/placeholders.yml` | `plugins/Runway/placeholders/*.yml` |
+
 ## Automatic Migration
 
 On startup, Runway checks for older files and migrates them when possible.
@@ -52,3 +57,6 @@ Then run:
 /runway reload
 ```
 
+{% hint style="success" %}
+After migration, keep each placeholder group in its own file. It makes future changes easier and reduces YAML merge mistakes.
+{% endhint %}

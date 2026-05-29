@@ -2,6 +2,15 @@
 
 Runway adds a few tags on top of normal MiniMessage.
 
+| Tag | Aliases | Purpose |
+| --- | --- | --- |
+| `<uppercase>` | `<upper>` | Converts content to uppercase. |
+| `<lowercase>` | `<lower>` | Converts content to lowercase. |
+| `<smallcaps>` | `<sc>` | Converts supported letters to small-cap characters. |
+| `<plain>` | None | Keeps visible text and strips nested styling. |
+| `<actionbar>` | `<ac>` | Sends content to the player's action bar. |
+| `<papi:...>` | `<placeholderapi:...>` | Resolves PlaceholderAPI placeholders. |
+
 ## Uppercase
 
 ```text
@@ -68,6 +77,10 @@ $<actionbar><green>Quest updated!</green></actionbar>
 
 This tag only works with player context.
 
+{% hint style="warning" %}
+`<actionbar>` needs a player target. It will not be useful in contexts where Runway cannot identify the receiving player.
+{% endhint %}
+
 ## PlaceholderAPI Tag
 
 When PlaceholderAPI is installed and enabled, Runway registers:
@@ -84,4 +97,3 @@ $<green>Hello <papi:player_name>
 ```
 
 Runway sends `%player_name%` to PlaceholderAPI, then parses the result as MiniMessage.
-

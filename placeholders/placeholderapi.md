@@ -2,6 +2,10 @@
 
 Runway supports PlaceholderAPI when the PlaceholderAPI plugin is installed and enabled before Runway finishes loading.
 
+{% hint style="info" %}
+Inside Runway text, use `<papi:player_name>`. In PlaceholderAPI-compatible plugins that call Runway's expansion, use `%runway_placeholder%`.
+{% endhint %}
+
 ## Using PlaceholderAPI Inside Runway Text
 
 Use the `<papi:...>` tag without percent signs:
@@ -65,3 +69,10 @@ Use:
 %runway_server_name%
 ```
 
+## Quick Comparison
+
+| Context | Syntax |
+| --- | --- |
+| Runway parsing text directly | `<papi:player_name>` |
+| Long Runway alias | `<placeholderapi:player_name>` |
+| Another plugin reading PlaceholderAPI expansions | `%runway_server_name%` |

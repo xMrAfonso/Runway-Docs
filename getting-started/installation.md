@@ -1,15 +1,19 @@
 # Installation
 
+{% hint style="info" %}
+Runway is a Paper plugin. Install it on the server, not on the client.
+{% endhint %}
+
 ## Requirements
 
 Runway is a Paper plugin. Use a modern Paper server that matches the Runway release you downloaded. The current plugin metadata targets the Paper `1.21` API.
 
-Recommended:
-
-- Paper `1.21+`
-- Java `21+`, or the Java version required by your Paper build
-- PlaceholderAPI, optional
-- MiniPlaceholders, optional
+| Requirement | Notes |
+| --- | --- |
+| Paper `1.21+` | Use the version supported by your Runway build. |
+| Java `21+` | Or the Java version required by your Paper build. |
+| PlaceholderAPI | Optional. Needed for `<papi:...>` tags. |
+| MiniPlaceholders | Optional. Needed for MiniPlaceholders tags. |
 
 ## Install Runway
 
@@ -25,10 +29,13 @@ Recommended:
 
 On startup, Runway logs when it enables. If PlaceholderAPI or MiniPlaceholders are installed and enabled, Runway also logs that support for them was enabled.
 
+{% hint style="warning" %}
+Runway depends on packet locations. If a message is not changing, first confirm that the matching listener is enabled in `settings.yml`.
+{% endhint %}
+
 If the server does not start, check:
 
 - The server is Paper, not Spigot.
 - The Minecraft version is supported by your Runway build.
 - The Java version matches your Paper and Runway build.
 - There are no broken YAML files in `plugins/Runway`.
-

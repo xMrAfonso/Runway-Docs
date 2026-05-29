@@ -2,6 +2,25 @@
 
 Runway parses text in the packet locations controlled by `settings.yml`.
 
+| Location | Listener |
+| --- | --- |
+| Chat | `listeners.chat` |
+| System messages | `listeners.systemMessages` |
+| Action bars | `listeners.actionbar` |
+| Boss bars | `listeners.bossbar` |
+| Tab list | `listeners.tablist` |
+| Titles | `listeners.titles` |
+| Dialogs | `listeners.dialogs` |
+| Entity text | `listeners.entityText` |
+| Player names | `listeners.playerNames` |
+| Inventory titles | `listeners.inventory.title` |
+| Inventory items | `listeners.inventory.items` |
+| Item updates | `listeners.items` |
+
+{% hint style="info" %}
+If a text location is not changing, check both the listener and whether the text needs the configured prefix.
+{% endhint %}
+
 ## Chat
 
 Player chat messages can be parsed. See [Chat Formatting And Sanitizing](../formatting/chat-formatting-and-sanitizing.md).
@@ -41,4 +60,3 @@ Runway can parse player display names sent through scoreboard team packets and p
 ## Items And Inventories
 
 Inventory titles, inventory item names/lore, and item packets can be parsed.
-

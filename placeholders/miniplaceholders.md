@@ -4,6 +4,10 @@ Runway supports MiniPlaceholders when the MiniPlaceholders plugin is installed a
 
 MiniPlaceholders tags are resolved together with Runway's normal MiniMessage parsing.
 
+{% hint style="info" %}
+Use the placeholder names documented by the MiniPlaceholders expansion you installed.
+{% endhint %}
+
 Example:
 
 ```text
@@ -23,3 +27,7 @@ miniPlaceholders:
 
 Lower values update more often. Higher values reduce refresh work. Use `0` or lower only if you need every parse to refresh the global placeholders.
 
+| Refresh rate | Behavior |
+| --- | --- |
+| Positive number | Cache global placeholders and refresh every N seconds. |
+| `0` or lower | Refresh on every parse. More current, but more expensive. |

@@ -8,6 +8,10 @@ plugins/Runway/lang.yml
 
 These messages support MiniMessage.
 
+{% hint style="success" %}
+Language messages are a good place to use your server colors, gradients, and reusable placeholders.
+{% endhint %}
+
 Common keys:
 
 ```yaml
@@ -22,3 +26,12 @@ notEnoughArguments: "<gradient:#0050ff:#0099ff>Runway</gradient><gray> | <white>
 
 `parseSuccess` can use `<text>`, which is replaced with the parsed preview text.
 
+| Key | Used when |
+| --- | --- |
+| `reloadSuccess` | `/runway reload` completes |
+| `parseSuccess` | `/runway parse` succeeds |
+| `parseFail` | `/runway parse` cannot parse the input |
+| `invalidArgument` | A command argument is invalid |
+| `unknownCommand` | A subcommand is unknown |
+| `noPermission` | A sender lacks permission |
+| `notEnoughArguments` | A command is missing required input |

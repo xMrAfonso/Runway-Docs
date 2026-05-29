@@ -1,5 +1,7 @@
 # First Formatting Test
 
+This page gives you a fast smoke test before you start editing larger plugin configs.
+
 ## Use The Parse Command
 
 Run this command in game:
@@ -9,6 +11,10 @@ Run this command in game:
 ```
 
 You should receive a formatted preview message.
+
+{% hint style="success" %}
+The parse command is the fastest way to separate MiniMessage syntax problems from listener or plugin integration problems.
+{% endhint %}
 
 ## Test Through Another Plugin
 
@@ -44,3 +50,10 @@ To stop one message from being parsed while global prefix mode is disabled, star
 !$<red>This stays unparsed.
 ```
 
+## What To Try Next
+
+| Goal | Next page |
+| --- | --- |
+| Understand prefix behavior | [How Runway Parses Text](how-runway-parses-text.md) |
+| Enable or disable text locations | [Listeners](../configuration/listeners.md) |
+| Build reusable tags | [Custom Placeholder Files](../placeholders/custom-placeholder-files.md) |

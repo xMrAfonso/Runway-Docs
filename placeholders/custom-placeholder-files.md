@@ -8,6 +8,10 @@ plugins/Runway/placeholders/
 
 Every `.yml` file in that folder is loaded as one placeholder group.
 
+{% hint style="success" %}
+Use separate files for separate concerns, such as `global.yml`, `ranks.yml`, and `events.yml`.
+{% endhint %}
+
 ## Simple Text Placeholders
 
 Use `text-placeholders` for simple reusable text.
@@ -30,6 +34,12 @@ $Visit <server_store>
 ## Group Prefix
 
 `prefix` is optional. Without it, placeholder names are used directly.
+
+| File prefix | Placeholder key | Tag you use |
+| --- | --- | --- |
+| None | `server_name` | `<server_name>` |
+| `server` | `name` | `<server_name>` |
+| `rank` | `vip_badge` | `<rank_vip_badge>` |
 
 ```yaml
 text-placeholders:
@@ -73,4 +83,3 @@ After editing placeholder files, run:
 ```text
 /runway reload
 ```
-

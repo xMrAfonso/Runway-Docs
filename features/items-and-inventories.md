@@ -2,6 +2,10 @@
 
 Runway can parse item display names and lore from supported item packets.
 
+{% hint style="info" %}
+Minecraft often renders item text in italics by default. `disableItalics: true` keeps formatted item text looking like normal UI text.
+{% endhint %}
+
 ## Settings
 
 ```yaml
@@ -62,3 +66,11 @@ If you want italic text intentionally, add it yourself:
 $<italic><gray>Ancient blade
 ```
 
+## Listener Map
+
+| Goal | Setting |
+| --- | --- |
+| Parse window titles | `listeners.inventory.title.enable` |
+| Parse items inside inventory windows | `listeners.inventory.items.enable` |
+| Parse individual item update packets | `listeners.items.enable` |
+| Remove default item italics | `disableItalics: true` |
